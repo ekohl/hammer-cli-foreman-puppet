@@ -49,4 +49,10 @@ module HammerCLIForemanPuppet
     'HammerCLIForemanPuppet::SmartClassParameter',
     'hammer_cli_foreman_puppet/smart_class_parameter'
   )
+
+  # plugins extensions
+  begin
+    require 'hammer_cli_foreman_puppet/discovery'
+  rescue LoadError
+  end
 end
